@@ -1,0 +1,8 @@
+<span *ngIf="loading"> loading...</span>
+<span *ngIf="empty"> (no dependencies)</span>
+<div *ngIf="dependencies" class="node-container">
+    <div *ngFor="let node of dependencies">
+        <span (click)="expand(node)">> {{ node.name }} </span>
+        <app-tree *ngIf="node.expanded" [packageName]="node.name"></app-tree>
+    </div>  
+</div>

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'packDeps';
+  packageName = '';
+  packageVersion = 'latest';
+  
+  getPackageData(packageName: string) {
+    this.packageName = packageName;
+  }
 }
